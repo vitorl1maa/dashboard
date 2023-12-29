@@ -2,8 +2,22 @@ import { AlertOctagon, CloudCog, FileCheck2, Server, User } from "lucide-react";
 import { useEffect, useState } from "react";
 import { getRegister } from "../services/getRegister";
 
+interface StatusProp {
+  colaboradores: number;
+  marcacoesDia: number;
+  statusServidor: string;
+  terminais: [];
+  falhas: number;
+}
+
 const StatusBar = () => {
-  const [register, setRegister] = useState([]);
+  const [register, setRegister] = useState<StatusProp>({
+    colaboradores: 0,
+    marcacoesDia: 0,
+    statusServidor: "",
+    terminais: [],
+    falhas: 0,
+  });
 
   useEffect(() => {
     getRegister().then((res) => {
@@ -51,7 +65,7 @@ const StatusBar = () => {
             </span>
             <div>
               <p>Equipamentos</p>
-              <span className="text-3xl">4</span>
+              <span className="text-3xl"> {register.terminais?.length} </span>
             </div>
           </div>
           <div className="flex gap-2 items-center px-3">

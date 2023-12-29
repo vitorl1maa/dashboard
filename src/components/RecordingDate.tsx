@@ -1,52 +1,38 @@
 import Chart from "react-apexcharts";
+import { getRegister } from "../services/getRegister";
+import { useEffect, useState } from "react";
+import { formatDate } from "../utils/formatDate";
+
+interface RecordingProps {
+  marcacoes: [];
+  data: string;
+}
 
 const RecordingDate = () => {
+  const [dateInfo, setDateInfo] = useState<RecordingProps[]>([]);
+  const dateLog = dateInfo.slice().reverse();
+
+  useEffect(() => {
+    getRegister().then((res) => {
+      setDateInfo(res.marcacoes);
+    });
+  }, []);
+
   const options = {
-    xaxis: {},
+    xaxis: {
+      categories: dateLog.map((date) => formatDate(date.data)),
+    },
     yaxis: {
       tooltip: {
-        enabled: true,
+        enabled: false,
       },
     },
   };
 
   const series = [
     {
-      name: "sales",
-      data: [
-        {
-          x: "2019/01/01",
-          y: 400,
-        },
-        {
-          x: "2019/04/01",
-          y: 430,
-        },
-        {
-          x: "2019/07/01",
-          y: 448,
-        },
-        {
-          x: "2019/10/01",
-          y: 470,
-        },
-        {
-          x: "2020/01/01",
-          y: 540,
-        },
-        {
-          x: "2020/04/01",
-          y: 580,
-        },
-        {
-          x: "2020/07/01",
-          y: 690,
-        },
-        {
-          x: "2020/10/01",
-          y: 690,
-        },
-      ],
+      name: "Marcações",
+      data: dateInfo.map((date) => date.marcacoes),
     },
   ];
 
