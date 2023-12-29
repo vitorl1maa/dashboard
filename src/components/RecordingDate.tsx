@@ -27,6 +27,16 @@ const RecordingDate = () => {
         enabled: false,
       },
     },
+    responsive: [
+      {
+        breakpoint: 1000,
+        options: {
+          chart: {
+            width: 350,
+          },
+        },
+      },
+    ],
   };
 
   const series = [

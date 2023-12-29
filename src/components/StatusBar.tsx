@@ -31,7 +31,7 @@ const StatusBar = () => {
         <p className="bg-blue-900 text-xl py-1 text-white px-5 rounded-t">
           Status
         </p>
-        <nav className="h-24 flex justify-between">
+        <nav className="lg:h-24 flex flex-col lg:flex-row gap-2 lg:gap-0 py-3 lg:p-0 justify-between">
           <div className="flex gap-2 items-center px-3">
             <span className=" rounded p-2 bg-yellow-400">
               <User size={32} color="#f2f2f2" />
