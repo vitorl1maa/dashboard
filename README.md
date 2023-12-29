@@ -60,7 +60,7 @@ Adicione ou modifique componentes, páginas e lógica conforme necessário no di
 
 ## Extras
 
-Consulte a documentação oficial do Vite para configurações avançadas, plugins e outras características.
+Consulte a documentação oficial do [Vite](https://vitejs.dev/guide/) para configurações avançadas, plugins e outras características.
 
 ## Licença
 
