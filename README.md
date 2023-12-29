@@ -1,30 +1,67 @@
-# React + TypeScript + Vite
+# Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](./LICENSE)
 
-Currently, two official plugins are available:
+Este projeto consiste em uma dashboard desenvolvida para a administração de um sistema de controle de ponto em uma empresa. Através de gráficos e tabelas, são apresentados dados relacionados ao número de funcionários, controle de equipamentos de identificação e registros de ponto.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologias
 
-## Expanding the ESLint configuration
+- React
+- TypeScript
+- Tailwind
+- Vite
+- NPM
+- Lucide icons
+- ApexCharts
+- Axios
+- Date-fns
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Pré-requisitos
 
-- Configure the top-level `parserOptions` property like this:
+Certifique-se de ter o Node.js instalado na sua máquina. Faça o download em https://nodejs.org/.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Instalação
+
+**1 - clone o repositório:**
+
+```bash
+git clone https://github.com/vitorl1maa/dashboard.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+**2- navegue até p diretótio do projeto**
+
+`cd dashboard`
+
+**3 - instale as depedências**
+
+```bash
+npm install
+```
+
+## Execução
+
+Inicie o servidor de desenvolvimento
+
+```bash
+npm run dev
+# ou
+yarn dev
+# ou
+pnpm dev
+# ou
+bun dev
+```
+
+O aplicativo estará disponível em http://localhost:5173.
+
+## Personalização
+
+Adicione ou modifique componentes, páginas e lógica conforme necessário no diretório `src`.
+
+## Extras
+
+Consulte a documentação oficial do Vite para configurações avançadas, plugins e outras características.
+
+## Licença
+
+- [MIT](./LICENSE)
